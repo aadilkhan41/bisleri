@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.bisleri.com/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>Bisleri Online Shop Login</title>
+</head>
+
+<body>
+    <div id="loader">
+        <img src="./asset/loader.gif" alt="Loading...">
+    </div>
+
+    <div class="app-ad">
+        <div class="app-ad-wrap">
+            <i onclick="hideAppAd()"></i>
+            <a href="./index.html"><img src="https://www.bisleri.com/images/bisleri-icon.webp" alt="Bisleri"></a>
+            <h4>Value Deals on Bisleri app</h4>
+        </div>
+        <span class="use-app-link">
+            <a href="#">Use App</a>
+        </span>
+    </div>
+
+    <div class="empty-cart-msg">
+        <p>There is no product added in the cart</p>
+    </div>
+
+    <header>
+        <div class="header-top">
+            <div class="header-loc"></div>
+            <div class="header-info">
+                <a href="tel:1800 121 1007"><span class="phone"></span><span>1800 121 1007</span></a>
+                <a href="mailto:wecare@bisleri.co.in"><span class="email"></span><span>wecare@bisleri.co.in</span></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-left">
+                <div class="logo">
+                    <input class="menu" type="button" title="menu" onclick="renderPhoneMenu()">
+                    <a href="./index.html">
+                        <img src="https://www.bisleri.com/images/logo.webp" alt="Bisleri">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>Jaipur</span>
+                <button class="search" type="button" title="search" onclick="renderSearchBar()"></button>
+                <div class="search-bar-panel">
+                    <div>
+                        <button class="close-panel" onclick="hideSearchBar()">Close</button>
+                        <h2>What are you looking for?</h2>
+                        <div class="search-bar">
+                            <div class="search-wraper">
+                                <input type="text" name="search-bar" placeholder="Type here">
+                                <button type="button">Search</button>
+                            </div>
+                        </div>
+                        <div class="top-brands">
+                            <p>Top brands</p>
+                            <div>
+                                <label>Bisleri Mineral Water</label>
+                                <label>Vedica - Himalayan Spring Water</label>
+                                <label>Hand Purifiers</label>
+                                <label>Merchandise</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="login" type="button" title="login"></button>
+                <ul class="login-drop-down">
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./signup.html">Register</a></li>
+                </ul>
+                <button class="cart" type="button" title="cart" onclick="emptyCart()"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="phone-menu">
+        <div class="list-cont">
+            <ul class="log-reg">
+                <li><a class="menu-links" href="./login.html">Login</a></li>
+                <li><a href="./signup.html">Register</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-1')">Greener Promise</p>
+                    <div class="exp-menu exp-menu-1">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-1')"><p><b>Back</b></p></li>
+                            <li><a href="./greenerPromise.html">Bisleri Greener Promise</a></li>
+                            <li><a href="https://www.bisleri.com/greener-promise/sustainability-report-2021-22.pdf">Sustainability report</a></li>
+                            <li><a href="./bottles-for-change.html">Bottles For Change</a></li>
+                            <li><a href="./rainwater-harvesting.html">Nayi Umeed</a></li>
+                            <li><a href="https://www.bisleri.com/pdf/csr-policy.pdf">CSR Policy</a></li>
+                            <li><a href="https://www.bisleri.com/csr-annual-return">CSR Annual Return</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./shop.html">Shop Products</a></li>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-2')">Brands</p>
+                    <div class="exp-menu exp-menu-2">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-2')"><p><b>Back</b></p></li>
+                            <li><a href="https://www.bisleri.com/bisleri-packaged-drinking-water">Bisleri Packed Drinking Water</a></li>
+                            <li><a href="./vedica.html">Vedica Himalayan Spring Water</a></li>
+                            <li><a href="https://www.bisleri.com/vedica-in-glass">Vedica In Glass</a></li>
+                            <li><a href="https://www.bisleri.com/vedica-in-glass">Vedica Spakling Water</a></li>
+                            <li><a href="https://www.bisleri.com/bisleri-soda">Bisleri Soda</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-3')">News Room</p>
+                    <div class="exp-menu exp-menu-3">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-3')"><p><b>Back</b></p></li>
+                            <li><a href="./PressRelease.html">Press Release</a></li>
+                            <li><a href="./news.html">News</a></li>
+                            <li><a href="./blogs.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./subscription.html">Subscription</a></li>
+                <li><a href="./UAE.html">UAE</a></li>
+            </ul>
+            <section>
+                <a class="phone" href="tel:1800 121 1007">1800 121 1007</a>
+                <a class="email" href="mailto:wecare@bisleri.co.in">wecare@bisleri.co.in</a>
+            </section>
+        </div>
+        <div class="close-menu-div"><button class="close-menu" title="close-menu" onclick="hidePhoneMenu()"></button></div>
+    </div>
+
+    <main>
+        <div class="main-1200px">
+            <div class="login-top">
+                <h1>Login</h1>
+                <h5>Don't have account?
+                        <a href="./signup.html">Create an account </a>
+                </h5>
+            </div>
+            <div class="login-panel">
+                <div class="form-wrapper">
+                    <h3>Login</h3>
+                    <form>
+                        <div class="inputs">
+                            <span class="form-group">
+                                <label>
+                                    <input type="text" placeholder=" ">
+                                    <span>Mobile</span>
+                                </label>
+                            </span>
+                            <span class="form-group">
+                                <label>
+                                    <input class="pass" type="password" placeholder=" " >
+                                    <span>Password</span>
+                                </label>
+                            </span>
+                        </div>
+                        <div class="buttons">
+                            <section><button type="button">Login</button></section>
+                            <section><a href="https://www.bisleri.com/forgot-password?city_id=47">Forgot Password?</a></section>
+                        </div>
+                    </form>
+                </div>
+                <div class="social-buttons">
+                    <button class="facebook">Continue with facebook</button>
+                    <button class="google">Continue with google</button>
+                </div>
+            </div>
+            <div class="second-footer">
+                <ul>
+                    <li class="delivery">
+                        <img src="asset/delivery.png" alt="delivery">
+                        <span>Fast delivery</span>
+                    </li>
+                    <li class="quality">
+                        <img src="asset/quality.png" alt="quality">
+                        <span>Five star quality</span>
+                    </li>
+                    <li class="secured">
+                        <img src="asset/secured.png" alt="secured">
+                        <span>Highly secured</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-cont">
+            <ul>
+                <li><i class="visa"></i></li>
+                <li><i class="mastercard"></i></li>
+                <li><i class="paytm"></i></li>
+                <li><i class="maestro"></i></li>
+                <li><img alt="card" src="https://www.bisleri.com/images/norton-2.webp"></li>
+                <li><img alt="card" src="https://www.bisleri.com/images/mcafee-2.webp"></li>
+            </ul>
+            <div class="footer-help">
+                <a link="https://www.bisleri.com/contact-us">Need help? Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="help-btn">
+        <button type="button" title="chat with expert">Chat with Expert</button>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

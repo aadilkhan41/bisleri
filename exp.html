@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.bisleri.com/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Bisleri International Pvt. Ltd - Top Packaged Mineral Water Manufacturer Company in India</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Work Sans";
+        }
+
+        .chat-box {
+            width: 320px;
+            height: 500px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 22;
+        }
+
+        .chat-header {
+            padding: 15px;
+            background-color: #00b7a2;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-header span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .chat-header button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .chat-content {
+            text-align: center;
+            color: #333;
+            margin-top: 65px;
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+            align-items: end;
+        }
+
+        .chat-content p {
+            margin: 5px 0;
+        }
+
+        .chat-content .message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .chat-content .message.b {
+            justify-content: flex-start;
+        }
+
+        .chat-content .message.b img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .chat-content .message.b .bubble {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 70%;
+        }
+
+        .chat-content .options {
+            width: 200px;
+            margin: 0 auto;
+            display: flex;
+            border-radius: 7px;
+            border: 1px solid #ededed;
+            flex-direction: column;
+        }
+
+        .chat-content .options a {
+            padding: 13px;
+            border: none;
+            border-bottom: 1px solid #ededed;
+            background-color: #fff;
+            color: #828282;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .chat-footer {
+            display: flex;
+            padding: 5px;
+            background-color: #ededed;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            padding: 15px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-right: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="help-btn">
+        <button type="button" title="chat with expert" onclick="renderChatExpert()">Chat with Expert</button>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <span>Bisleri</span>
+            <div>
+                <button onclick="minimizeChat()">_</button>
+                <button onclick="closeChat()">×</button>
+            </div>
+        </div>
+        <div class="chat-content" id="chatContent">
+            <p>Chat started at 8:26 PM</p>
+            <div class="message b">
+                <div class="bubble" style="margin-left: 41px;">Welcome to Bisleri!</div>
+            </div>
+            <div class="message b">
+                <img src="./asset/chatb.jpg" alt="B">
+                <div class="bubble">Ready to quench your thirst? What can we help you with today?</div>
+            </div>
+            <p>Bisleri • 8:26 PM</p>
+            <div class="options">
+                <a href="./signup.html">Sign Up</a>
+                <a href="./login.html">Log In</a>
+                <a href="#">Explore FAQs</a>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+        </div>
+    </div>
+
+    <script>
+
+        function renderChatExpert(){
+            document.querySelector(".chat-box").style.display = "flex";
+        }
+
+        function closeChat() {
+            document.getElementById('chatBox').style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>
