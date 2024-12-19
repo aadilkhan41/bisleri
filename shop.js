@@ -159,6 +159,13 @@ dots.forEach((dot, index) => {
 // Initialize the slider
 updateSlider();
 
+
+
+
+
+
+
+
 //product section here
 // Get all the brand buttons and product cards
 const brandButtons = document.querySelectorAll('.brand-iteam');
@@ -214,6 +221,24 @@ brandButtons.forEach(button => {
 
 // Initially, show all products
 filterProducts('all-products');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //side buttons

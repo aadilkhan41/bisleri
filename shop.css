@@ -710,12 +710,11 @@ body {
 
 /* Product Cards Section */
 #product-container {
-    width: 90%;  
+    width: 80%;  
     margin: 0 auto;  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
@@ -724,6 +723,7 @@ body {
     text-decoration: none;  
     color: inherit;  
 }
+
 .product-card {
     width: 350px;
     height: auto;
@@ -733,6 +733,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: none; 
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .product-iteams img {
@@ -1321,12 +1322,12 @@ footer{
 
 
    .flex-container{
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
    }
    
-   #start { 
-       
+   #start {
        flex-direction: column;  
    }
    
