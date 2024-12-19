@@ -1,5 +1,3 @@
-Codeshare logo
- ShareSign UpLog In
 1
 # Bisleri UI Clone
 2
